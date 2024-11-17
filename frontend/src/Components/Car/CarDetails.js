@@ -15,7 +15,7 @@ const CarDetails = () => {
   const handleDelete = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`https://spyne-backend-ie0z.onrender.com/api/v1/car/delete/${id}`, {
+      const response = await fetch(`https://secure-mae-na0w0-0a956918.koyeb.app/api/v1/car/delete/${id}`, {
         method: "DELETE",
         headers: {
             Authorization: `Bearer ${token}`,
@@ -43,7 +43,7 @@ const CarDetails = () => {
   useEffect(() => {
     const fetchCarDetails = async () => {
       try {
-        const response = await fetch(`https://spyne-backend-ie0z.onrender.com/api/v1/car/details/${id}`);
+        const response = await fetch(`https://secure-mae-na0w0-0a956918.koyeb.app/api/v1/car/details/${id}`);
         if (!response.ok) {
           throw new Error("Failed to fetch car details");
         }

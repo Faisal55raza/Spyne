@@ -21,7 +21,7 @@ const Products = () => {
       try {
         setLoading(true);
         
-        let url = "https://spyne-backend-ie0z.onrender.com/api/v1/car/all"; // Base URL
+        let url = "https://secure-mae-na0w0-0a956918.koyeb.app/api/v1/car/all"; // Base URL
 
         if (keyword) {
           url += `?search=${keyword}`;

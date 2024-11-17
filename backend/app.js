@@ -8,7 +8,7 @@ import cloudinary from 'cloudinary';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import swaggerUi from 'swagger-ui-express';
-import swaggerDocument from './swagger.json'  with { type: 'json' };
+import swaggerDocument from './swagger.json' assert { type: 'json' };
 // Load environment variables
 dotenv.config({ path: './.env' });
 
@@ -34,7 +34,7 @@ const app = express();
 app.use(bodyParser.json({ limit: '50mb' }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({origin:["https://spyne-v7gh.vercel.app","http://localhost:3000","https://spyne-backend-ie0z.onrender.com"],    
+app.use(cors({origin:["https://spyne-v7gh.vercel.app","http://localhost:3000","https://secure-mae-na0w0-0a956918.koyeb.app"],    
   methods: ["GET", "POST", "PUT", "DELETE"],
   allowedHeaders: ["Content-Type", "Authorization", "credentials","withCredentials"],
   credentials: true
